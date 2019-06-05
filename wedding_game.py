@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[68]:
+# In[7]:
 
 
 import tkinter as tk
@@ -25,7 +25,7 @@ timer_lbl = tk.Label(window, text="Timer",borderwidth=2, relief="groove")
 timer_lbl.grid(column=1, row=0)
 
 
-main_txt = tk.Label(window,text="WORD HERE", font=(None, 70),height=2, width=10)
+main_txt = tk.Label(window,text="WORD HERE", font=(None, 70),height=2, width=15)
 main_txt.grid(column=5, row=10)
 main_txt.config(bg=_from_rgb((255, 255, 214)))
 
@@ -42,7 +42,10 @@ def clicked(event=None):
     countdown(int(max_time_txt.get()))
     main_txt['text'] = guessWord.pop()
     btn_start['state'] = 'disabled'
-    btn_next['state'] = 'normal'    
+    btn_next['state'] = 'normal'
+    count_lbl.config(bg=_from_rgb((255, 255, 224)))
+    count_lbl['text'] = "Correct: 0"
+    window.counter = 0
 def countdown(count):
     # change text in label        
     timer_lbl['text'] = count
