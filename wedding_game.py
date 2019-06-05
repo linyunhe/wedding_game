@@ -1,10 +1,11 @@
 
 # coding: utf-8
 
-# In[7]:
+# In[5]:
 
 
 import tkinter as tk
+import random
 
 def _from_rgb(rgb):
     """translates an rgb tuple of int to a tkinter friendly color code
@@ -35,6 +36,7 @@ w1.grid(column=5, row=90)
 w1.config(bg=_from_rgb((255, 255, 214)))
 
 guessWord = open("words2.txt", encoding="utf-8").read().split('\n')
+random.shuffle(guessWord)
 
 
 def clicked(event=None):
