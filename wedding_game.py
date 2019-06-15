@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[6]:
+# In[3]:
 
 
 import tkinter as tk
@@ -50,7 +50,7 @@ timer_lbl = tk.Label(window, text="Timer",font=(None, round(w/46)),borderwidth=2
 timer_lbl.grid(column=1, row=0)
 
 
-main_txt = tk.Label(window,text="WORD HERE", font=(None, round(w/23)),height=2, width=15)
+main_txt = tk.Label(window,text="WORD HERE", font=(None, round(w/15)),height=2, width=15)
 main_txt.grid(column=5, row=10)
 main_txt.config(bg=_from_rgb((255, 255, 214)))
 
